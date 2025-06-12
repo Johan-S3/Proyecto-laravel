@@ -27,6 +27,6 @@ class Product extends Model
 
     public function image(): HasOne
     {
-        return $this->hasOne("Image","image_id");
+        return $this->hasOne("Image", "id", "image_id");
     }
 }
