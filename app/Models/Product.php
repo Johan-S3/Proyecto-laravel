@@ -16,8 +16,7 @@ class Product extends Model
         'name',
         'price',
         'stock',
-        'category_id',
-        'image_id'
+        'category_id'
     ];
 
     public function category()
@@ -25,8 +24,11 @@ class Product extends Model
         return $this->belongsTo("Category");
     }
 
-    public function image(): HasOne
+    /**
+     * Get all of the post's comments.
+     */
+    public function images()
     {
-        return $this->hasOne("Image","image_id");
+        return $this->morphMany(Image::class, 'imageable');
     }
 }

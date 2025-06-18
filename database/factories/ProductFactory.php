@@ -23,7 +23,7 @@ class ProductFactory extends Factory
             'price'=> random_int(1000, 100000),
             'stock'=> random_int(1, 100),
             'category_id' => Category::all()->random()->id,
-            'image_id' =>  Image::factory()->create()->id, 
+            // 'image_id' =>  Image::factory()->create()->id, 
         ];
     }
 }
