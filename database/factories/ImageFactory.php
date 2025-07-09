@@ -20,7 +20,7 @@ class ImageFactory extends Factory
         $faker = \Faker\Factory::create();
         $faker->addProvider(new \Smknstd\FakerPicsumImages\FakerPicsumImagesProvider($faker));
         return [
-            'path' => $this->faker->imageUrl(120, 120),
+            'path' => $this->faker->imageUrl(300, 150),
         ];
     }
 }

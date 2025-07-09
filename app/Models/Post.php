@@ -9,6 +9,9 @@ class Post extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['title', 'body', 'user_id'];
+
+
     /**
      * Get the parent commentable model (post or video).
      */ 

@@ -7,9 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
-<body>
+<body class="bg-[#C5BEB4]">
   <header>@yield('header')</header>
-  <main class="grid grid-cols-4 gap-4 justify-center w-screen">
+  <main class="w-full flex justify-center">
     @yield('main')
   </main>
   <footer>
