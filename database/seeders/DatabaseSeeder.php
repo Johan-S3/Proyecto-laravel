@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
     {
         User::factory(10)->create();
         Category::factory(10)->create();
-        Post::factory(1)->create()->each(
+        Post::factory(100)->create()->each(
             function( Post $post){
                 Image::factory()->create([
                     'imageable_id' => $post->id,

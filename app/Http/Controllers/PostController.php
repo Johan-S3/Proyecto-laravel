@@ -7,13 +7,15 @@ use App\Models\Image;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class PostController extends Controller
 {
     public function index(){
         $posts = Post::all();
-
-        return view("posts.index", compact('posts'));
+        // dd($posts);
+        return Inertia::render('Posts/Listar', ["data" => $posts]);
+        // return view("posts.index", compact('posts'));
     }
 
     public function create(){
